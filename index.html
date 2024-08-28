@@ -1,62 +1,241 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Héctor Rodríguez-Pérez - Bioinformatics & Data Scientist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        :root {
+            --bg-color: #1a1a1a;
+            --text-color: #f5f5f5;
+            --header-bg: linear-gradient(to right, #004466, #006699);
+            --header-text: #f5f5f5;
+            --section-bg: #2a2a2a;
+            --section-alt-bg: #333;
+            --accent-color: #00A0DC;
+            --footer-bg: #1a1a1a;
+            --footer-text: #f5f5f5;
+        }
 
-  <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Alu0100774429.GitHub.io : Página personal GitHub Pages">
+        .light-mode {
+            --bg-color: #f5f5f5;
+            --text-color: #333;
+            --header-bg: linear-gradient(to right, #0077B5, #00A0DC);
+            --header-text: white;
+            --section-bg: #fff;
+            --section-alt-bg: #f9f9f9;
+            --accent-color: #0077B5;
+            --footer-bg: #333;
+            --footer-text: white;
+        }
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: var(--header-bg);
+            color: var(--header-text);
+            padding: 30px 0;
+            border-bottom: none;
+        }
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--header-text);
+        }
+        .header-text {
+            flex-grow: 1;
+            padding-left: 30px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            font-weight: 700;
+        }
+        header p {
+            margin: 10px 0 0;
+            font-size: 1.2em;
+            font-weight: 300;
+        }
+        .bio, .publications {
+            background: var(--section-bg);
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        .skills {
+            background: var(--section-alt-bg);
+            color: var(--text-color);
+            padding: 30px;
+            margin-top: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        footer {
+            background: var(--footer-bg);
+            color: var(--footer-text);
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        h2 {
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .toolbar {
+            background-color: var(--footer-bg);
+            padding: 10px 0;
+            text-align: right;
+        }
+        .toolbar a {
+            color: var(--footer-text);
+            margin-left: 20px;
+            font-size: 1.2em;
+        }
+        .toolbar a:hover {
+            color: var(--accent-color);
+        }
+        #mode-switch {
+            background-color: var(--accent-color);
+            color: var(--header-text);
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+        #mode-switch:hover {
+            background-color: var(--header-text);
+            color: var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+    <div class="toolbar">
+        <div class="container">
+            <button id="mode-switch">Switch to Light Mode</button>
+            <a href="mailto:hectorp94@hotmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/héctor-rodríguez-pérez-470592122/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+    <header>
+        <div class="container header-content">
+            <img src="images/profile_hrp.jpg" alt="Héctor Rodríguez-Pérez" class="profile-photo">
+            <div class="header-text">
+                <h1>Héctor Rodríguez-Pérez</h1>
+                <p>Bioinformatics Scientist | Data Enthusiast | Machine Learning and Software Engineer</p>
+            </div>
+        </div>
+    </header>
 
-    <title>Alu0100774429.GitHub.io</title>
-  </head>
+    <div class="container">
+        <section class="bio">
+            <h2>About Me 🧬💻</h2>
+            <p>Hello everyone! I'm Héctor, a passionate bioinformatics and data scientist with expertise in analyzing complex biological data and deriving meaningful insights. My work involves integrating computational methods with biological research to solve intricate problems in life sciences.</p>
 
-  <body>
+            <p>With a strong background in computer science, I specialize in developing innovative solutions for processing and interpreting large-scale genomic and metagenomic datasets. My experience spans various areas of bioinformatics, including next-generation sequencing analysis, microbiome research, and the application of machine learning techniques to biological problems.</p>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/hecrp/alu0100774429.github.io">View on GitHub</a>
+            <p>I'm particularly enthusiastic about leveraging cutting-edge technologies like nanopore sequencing and artificial intelligence to push the boundaries of what's possible in genomics and metagenomics. My recent work has focused on developing real-time analysis pipelines for microbial community profiling and exploring the intricate relationships between antibiotic resistance and clinical outcomes.</p>
 
-          <h1 id="project_title">Alu0100774429.GitHub.io</h1>
-          <h2 id="project_tagline">Página personal GitHub Pages</h2>
+            <p>Beyond my professional pursuits, I'm an avid learner always exploring new technologies and methodologies. I enjoy working on personal programming projects that challenge me to apply my skills in novel ways, from learning new programming languages and frameworks to experimenting with large language models for natural language processing tasks.</p>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/hecrp/alu0100774429.github.io/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/hecrp/alu0100774429.github.io/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
+            <p>I'm always open to collaborations and discussions about innovative projects in bioinformatics, data science, or software engineering. Feel free to reach out if you'd like to connect or explore potential opportunities to work together!</p>
+        </section>
+
+        <section class="skills">
+            <h2>Skills 🛠️</h2>
+            <ul>
+                <li>Bioinformatics applications to Next-Generation Sequencing (NGS) Data Analysis (Human genomics, metagenomics, microbial diversity, antibiotic resistance, single-cell genomics) 🧬🔬</li>
+                <li>Machine Learning and Statistical Modeling 🤖📊</li>
+                <li>Programming (Python and R environments, Bash scripting, Java, MS environments, C/C++, SQL) 💻🐍</li>
+                <li>Linux system administration, Docker, and HPC/cloud computing ☁️🐧</li>
+                <li>Natural Language Processing (NLP) with LLMs and Open Source Language Models 📝🗣️</li>
+                <li>Strong analytical and problem-solving skills with a focus on efficiency, simplicity and innovative solutions 🧩💡</li>
+                <li>Ability to conceptualize and implement novel ideas in bioinformatics and data science 💭🔬</li>
+                <li>Strong communication skills, adept at presenting complex scientific and technical concepts to diverse audiences 🎤📊</li>
+            </ul>
+        </section>
+
+        <section class="publications">
+            <h2>Most Relevant Publications 📚</h2>
+            <ul>
+                <li>Rodríguez-Pérez H, Ciuffreda L, Flores C. NanoRTax, a real-time pipeline for taxonomic and diversity analysis of nanopore 16S rRNA amplicon sequencing data. Computational and Structural Biotechnology Journal. 20, pp. 5350 - 5354. Elsevier, 23/10/2022.</li>
+                <li>Rodríguez H, Ciuffreda L, Flores C. NanoCLUST: a species-level analysis of 16S rRNA nanopore sequencing data. Bioinformatics. 37 - 11, pp. 1600 - 1601. Oxford, 12/07/2021.</li>
+                <li>Ciuffreda L, Rodríguez Perez H, Flores Infante C. Nanopore sequencing and its application to the study of microbial communities. Computational and Structural Biotechnology Journal. 19, pp. 1497 - 1511. Elsevier, 07/03/2021.</li>
+                <li>Rodríguez-Pérez H, Ciuffreda L, Hernández-Beeftink T, Guillen-Guio B, Domínguez D, Corrales A, Espinosa E, Alcoba-Florez J, Lorenzo-Salazar JM, González-Montelongo R, Villar J, Flores C. Tracheal aspirate metagenomics reveals association of antibiotic resistance with non-pulmonary sepsis mortality. American Journal of Respiratory Cell and Molecular Biology. (2024). Accepted for publication.</li>
+            </ul>
+            <p>For a complete list of publications, please visit my <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Rodríguez-Pérez+H&cauthor_id=33815688" target="_blank">PubMed profile</a>. 📚🔍</p>
+        </section>
+        <section class="personal-projects">
+            <h2>Personal Projects 🚀</h2>
+            <p><em>Note: The following projects are non-bioinformatics related and showcase my other current programming interests.</em></p>
+            
+            <h3><a href="https://hecrp.github.io/Twitch-Battle-Royale-Bot/" target="_blank">Twitch Battle Royale Bot</a> 🎮</h3>
+            <p>A Twitch bot that simulates a battle royale game in chat, allowing viewers to participate in an interactive experience. 🏆💬</p>
+            <ul>
+                <li><a href="https://github.com/hecrp/Twitch-Battle-Royale-Bot" target="_blank">GitHub Repository</a> 📁</li>
+                <li><a href="https://twitch-battle-royale-bot.readthedocs.io/" target="_blank">ReadTheDocs Documentation</a> 📚</li>
+            </ul>
+
+            <h3><a href="https://hecrp.github.io/Persona-Chatting-Twitch-Bot/" target="_blank">Persona Chatting Bot</a> 🤖</h3>
+            <p>A multiengine AI-powered Twitch bot that brings diverse interactions to chat using advanced GPT and Claude language models. The bot responds to messages based on chosen character personas. 💬🎭</p>
+            <ul>
+                <li><a href="https://github.com/hecrp/Persona-Chatting-Twitch-Bot" target="_blank">GitHub Repository</a> 📁</li>
+                <li><a href="https://persona-chatting-twitch-bot.readthedocs.io/" target="_blank">ReadTheDocs Documentation</a> 📚</li>
+            </ul>
+        </section>
     </div>
 
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
-        <h1>
-<a id="héctor-rodríguez-pérez" class="anchor" href="#h%C3%A9ctor-rodr%C3%ADguez-p%C3%A9rez" aria-hidden="true"><span class="octicon octicon-link"></span></a>Héctor Rodríguez Pérez</h1>
+    <footer>
+        <p>&copy; 2024 Héctor Rodríguez-Pérez. All rights reserved. 🌟</p>
+    </footer>
 
-<h2>
-<a id="prácticas-de-procesadores-de-lenguajes" class="anchor" href="#pr%C3%A1cticas-de-procesadores-de-lenguajes" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Prácticas de procesadores de lenguajes:</strong>
-</h2>
+    <script>
+        const modeSwitch = document.getElementById('mode-switch');
+        const body = document.body;
 
-<p><a href="https://github.com/eduardobritosan/tempConverter">Práctica 0 + 1. Conversor de temperaturas.</a> : Conversor de temperaturas con sus respectivos tests usando mocha y chai. Añadidos Karma, Travis y cubrimiento con Blanket.
-<a href="http://eduardobritosan.github.io/csvJavascript/">Despliegue en gh-pages.</a></p>
-
-<p><a href="https://github.com/eduardobritosan/csvJavascript">Práctica 2. Analizador de cadenas CSV.</a> Tests con mocha y chai. Karma, Travis, cubrimiento con Blanket y despliegue en Heroku (incompleto).
-<a href="http://eduardobritosan.github.io/tempConverter/">Despliegue en gh-pages</a></p>
-
-<p><em>Prácticas realizadas con <a href="http://eduardobritosan.github.io">Eduardo Brito Sánchez</a></em></p>
-      </section>
-    </div>
-
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Alu0100774429.GitHub.io maintained by <a href="https://github.com/hecrp">hecrp</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
-
-    
-
-  </body>
+        modeSwitch.addEventListener('click', () => {
+            body.classList.toggle('light-mode');
+            if (body.classList.contains('light-mode')) {
+                modeSwitch.textContent = 'Switch to Dark Mode';
+            } else {
+                modeSwitch.textContent = 'Switch to Light Mode';
+            }
+        });
+    </script>
+</body>
 </html>
