@@ -1,0 +1,659 @@
+/* CYBERDYSTOPIA THEME - MONOCHROME VERSION */
+
+:root {
+  --background: #0c0c0c;
+  --text-primary: #e0e0e0;
+  --text-secondary: #777;
+  --accent-primary: #aaa;
+  --accent-secondary: #666;
+  --accent-tertiary: #888;
+  --grid-color: rgba(40, 40, 40, 0.3);
+  --glitch-color-1: #999;
+  --glitch-color-2: #555;
+  --terminal-background: rgba(15, 15, 15, 0.8);
+  --terminal-border: #333;
+  --terminal-text: #aaa;
+  --card-background: rgba(20, 20, 20, 0.7);
+  --card-border: #333;
+  --card-hover: rgba(35, 35, 35, 0.9);
+  --glow-color: rgba(150, 150, 150, 0.5);
+}
+
+/* Tipografía */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background-color: var(--background);
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.6;
+  overflow-x: hidden;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(12, 12, 12, 0.97), rgba(12, 12, 12, 0.97)),
+    repeating-linear-gradient(transparent, transparent 50px, var(--grid-color) 50px, var(--grid-color) 51px),
+    repeating-linear-gradient(90deg, transparent, transparent 50px, var(--grid-color) 50px, var(--grid-color) 51px);
+  z-index: -1;
+}
+
+/* Contenedor principal */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  position: relative;
+}
+
+/* Elementos de texto */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1rem;
+  border-left: 4px solid var(--accent-primary);
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent-primary), transparent);
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--accent-secondary);
+}
+
+p {
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+a {
+  color: var(--accent-tertiary);
+  text-decoration: none;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--text-primary);
+  text-shadow: 0 0 8px var(--glow-color);
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--accent-primary);
+  transition: width 0.3s ease;
+}
+
+a:hover::after {
+  width: 100%;
+}
+
+/* Header */
+header {
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+  position: relative;
+  border-bottom: 1px solid var(--accent-primary);
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.profile-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.profile-photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  object-fit: cover;
+  border: 2px solid var(--accent-primary);
+  position: relative;
+  filter: grayscale(40%) contrast(120%);
+  box-shadow: 0 0 20px var(--glow-color);
+}
+
+.profile-photo::before {
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border: 1px solid var(--accent-primary);
+  z-index: -1;
+  animation: glitch 2s infinite alternate-reverse;
+}
+
+.subtitle {
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1.1rem;
+  color: var(--accent-secondary);
+  margin-bottom: 1rem;
+  display: block;
+}
+
+/* Terminal Section */
+.terminal-section {
+  background: var(--terminal-background);
+  border: 1px solid var(--terminal-border);
+  border-radius: 5px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.terminal-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--terminal-border);
+  padding-bottom: 0.5rem;
+}
+
+.terminal-title {
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--accent-tertiary);
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.terminal-dots {
+  display: flex;
+  gap: 5px;
+  margin-right: 1rem;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot-red { background-color: #555; }
+.dot-yellow { background-color: #777; }
+.dot-green { background-color: #999; }
+
+.terminal-content {
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--terminal-text);
+  line-height: 1.4;
+}
+
+.terminal-content > p {
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 15px;
+  display: block;
+  clear: both;
+}
+
+.terminal-content > p:first-child {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px dashed var(--terminal-border);
+}
+
+.terminal-content > p:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.terminal-content > p:first-child::before {
+  content: "> ";
+  color: var(--accent-primary);
+  position: absolute;
+  left: 0;
+}
+
+.terminal-content > p:not(:first-child)::before {
+  content: "$ ";
+  color: var(--accent-primary);
+  position: absolute;
+  left: 0;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  height: 1.2em;
+  background-color: var(--terminal-text);
+  animation: blink 1s infinite;
+  vertical-align: middle;
+}
+
+/* Cards */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.card {
+  background: var(--card-background);
+  border: 1px solid var(--card-border);
+  border-radius: 5px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-primary), transparent);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  background: var(--card-hover);
+}
+
+.card h3 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--accent-primary);
+}
+
+.card-icon {
+  font-size: 1.5rem;
+  color: var(--accent-secondary);
+}
+
+/* Skills */
+.skills-list {
+  list-style: none;
+}
+
+.skills-list li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.skills-list li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color: var(--accent-tertiary);
+  font-family: 'Share Tech Mono', monospace;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.social-link {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--accent-secondary);
+  border-radius: 5px;
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  transform: translateY(-3px);
+  color: var(--background);
+  box-shadow: 0 0 15px var(--glow-color);
+}
+
+/* Proyectos */
+.project {
+  margin-bottom: 2rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-link {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--accent-tertiary);
+  border-radius: 4px;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  background: var(--accent-tertiary);
+  color: var(--background);
+}
+
+/* Footer */
+footer {
+  margin-top: 3rem;
+  padding: 2rem 0;
+  border-top: 1px solid var(--accent-primary);
+  text-align: center;
+  position: relative;
+}
+
+/* Animaciones */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: inset(40% 0 61% 0);
+    transform: translate(-10px, 5px);
+  }
+  20% {
+    clip-path: inset(92% 0 1% 0);
+    transform: translate(10px, -5px);
+  }
+  40% {
+    clip-path: inset(43% 0 1% 0);
+    transform: translate(5px, 10px);
+  }
+  60% {
+    clip-path: inset(25% 0 58% 0);
+    transform: translate(-5px, 5px);
+  }
+  80% {
+    clip-path: inset(54% 0 7% 0);
+    transform: translate(5px, -10px);
+  }
+  100% {
+    clip-path: inset(58% 0 43% 0);
+    transform: translate(-10px, 10px);
+  }
+}
+
+/* Glitch Effect */
+.glitch {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.glitch::before {
+  left: 2px;
+  text-shadow: -1px 0 var(--glitch-color-1);
+  animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+  left: -2px;
+  text-shadow: 2px 0 var(--glitch-color-2);
+  animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+  0% {
+    clip-path: inset(60% 0 30% 0);
+  }
+  100% {
+    clip-path: inset(10% 0 85% 0);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0% {
+    clip-path: inset(20% 0 60% 0);
+  }
+  100% {
+    clip-path: inset(70% 0 10% 0);
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .profile-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .profile-photo {
+    margin: 0 auto 1.5rem;
+  }
+  
+  .card-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Publications List */
+.publication-list {
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--terminal-text);
+  list-style-position: inside;
+  counter-reset: item;
+}
+
+.publication-list li {
+  margin-bottom: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.publication-list li::marker {
+  color: var(--accent-primary);
+  font-weight: bold;
+}
+
+.terminal-content ol {
+  padding-left: 0.5rem;
+}
+
+.terminal-content .publication-list li::before {
+  content: none;
+}
+
+.terminal-content p {
+  margin-top: 1.5rem;
+  font-style: italic;
+  color: var(--terminal-text);
+  border-top: 1px solid var(--accent-secondary);
+  padding-top: 1rem;
+  display: block;
+  clear: both;
+}
+
+/* Estilos específicos solo para los párrafos directos de terminal-content (about_me.sh) */
+.terminal-content > p.bio-paragraph {
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 15px;
+  display: block;
+  clear: both;
+}
+
+.terminal-content > p.bio-paragraph:first-of-type {
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px dashed var(--terminal-border);
+  position: relative;
+}
+
+.terminal-content > p.bio-paragraph:first-of-type::after {
+  content: "";
+  display: block;
+  height: 5px;
+  width: 100%;
+  margin-top: 10px;
+  clear: both;
+}
+
+.terminal-content > p.bio-paragraph:not(:first-of-type) {
+  margin-top: 1.5rem;
+  padding-top: 0.5rem;
+  position: relative;
+}
+
+.terminal-content > p.bio-paragraph:first-of-type::before {
+  content: "> ";
+  color: var(--accent-primary);
+  position: absolute;
+  left: 0;
+}
+
+.terminal-content > p.bio-paragraph:not(:first-of-type)::before {
+  content: "$ ";
+  color: var(--accent-primary);
+  position: absolute;
+  left: 0;
+}
+
+.terminal-content p a {
+  color: var(--accent-primary);
+  text-decoration: underline;
+  transition: all 0.3s ease;
+}
+
+.terminal-content p a:hover {
+  color: var(--text-primary);
+  text-shadow: 0 0 5px var(--glow-color);
+}
+
+/* Bio Container */
+.bio-container {
+  display: block;
+  width: 100%;
+}
+
+.bio-item {
+  display: block;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.bio-item:not(:last-child) {
+  border-bottom: 1px dashed var(--terminal-border);
+  margin-bottom: 2.5rem;
+}
+
+.terminal-prompt {
+  color: var(--accent-primary);
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+/* Para móviles, aseguramos que el espacio se mantiene */
+@media (max-width: 768px) {
+  .bio-item {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .bio-item:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+/* Bio List - con guiones en lugar de números */
+.bio-list {
+  font-family: 'Share Tech Mono', monospace;
+  color: var(--terminal-text);
+  list-style: none;
+  padding-left: 0.5rem;
+}
+
+.bio-list li {
+  margin-bottom: 1.5rem;
+  position: relative;
+  line-height: 1.5;
+  padding-left: 1.8rem;
+}
+
+.bio-list li::before {
+  content: "//";
+  color: var(--accent-primary);
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+} 

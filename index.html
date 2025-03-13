@@ -3,269 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Héctor Rodríguez-Pérez - Bioinformatics & Data Scientist</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        :root {
-            --bg-color: #1a1a1a;
-            --text-color: #f5f5f5;
-            --header-bg: linear-gradient(to right, #004466, #006699);
-            --header-text: #f5f5f5;
-            --section-bg: #2a2a2a;
-            --section-alt-bg: #333;
-            --accent-color: #00A0DC;
-            --footer-bg: #1a1a1a;
-            --footer-text: #f5f5f5;
-        }
-
-        .light-mode {
-            --bg-color: #f5f5f5;
-            --text-color: #333;
-            --header-bg: linear-gradient(to right, #0077B5, #00A0DC);
-            --header-text: white;
-            --section-bg: #fff;
-            --section-alt-bg: #f9f9f9;
-            --accent-color: #0077B5;
-            --footer-bg: #333;
-            --footer-text: white;
-        }
-
-        body {
-            font-family: 'Roboto', sans-serif;
-            line-height: 1.6;
-            color: var(--text-color);
-            background-color: var(--bg-color);
-            margin: 0;
-            padding: 0;
-            transition: background-color 0.3s, color 0.3s;
-        }
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: auto;
-            overflow: hidden;
-            padding: 15px;
-        }
-        header {
-            background: var(--header-bg);
-            color: var(--header-text);
-            padding: 20px 0;
-            border-bottom: none;
-        }
-        .header-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-        }
-        .profile-photo {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--header-text);
-            margin-bottom: 15px;
-        }
-        .header-text {
-            width: 100%;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 1.8em;
-            font-weight: 700;
-            line-height: 1.2;
-        }
-        header p {
-            margin: 10px 0 0;
-            font-size: 1em;
-            font-weight: 300;
-        }
-        .bio, .publications, .skills, .personal-projects {
-            background: var(--section-bg);
-            padding: 20px;
-            margin-top: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            border-radius: 5px;
-        }
-        .skills {
-            background: var(--section-alt-bg);
-            color: var(--text-color);
-        }
-        footer {
-            background: var(--footer-bg);
-            color: var(--footer-text);
-            text-align: center;
-            padding: 15px;
-            margin-top: 20px;
-        }
-        h2 {
-            color: var(--accent-color);
-            border-bottom: 2px solid var(--accent-color);
-            padding-bottom: 10px;
-            font-size: 1.5em;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .toolbar {
-            background-color: var(--footer-bg);
-            padding: 10px 0;
-            text-align: center;
-        }
-        .toolbar a {
-            color: var(--footer-text);
-            margin: 0 10px;
-            font-size: 1.2em;
-        }
-        .toolbar a:hover {
-            color: var(--accent-color);
-        }
-        #mode-switch {
-            background-color: var(--accent-color);
-            color: var(--header-text);
-            border: none;
-            padding: 8px 15px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 0.9em;
-            transition: background-color 0.3s;
-            margin-bottom: 10px;
-        }
-        #mode-switch:hover {
-            background-color: var(--header-text);
-            color: var(--accent-color);
-        }
-
-        @media (min-width: 768px) {
-            .container {
-                width: 80%;
-            }
-            .header-content {
-                flex-direction: row;
-                justify-content: space-between;
-                text-align: left;
-            }
-            .profile-photo {
-                margin-bottom: 0;
-            }
-            .header-text {
-                padding-left: 30px;
-            }
-            header h1 {
-                font-size: 2.2em;
-            }
-            header p {
-                font-size: 1.2em;
-            }
-            .toolbar {
-                text-align: right;
-            }
-            #mode-switch {
-                margin-bottom: 0;
-            }
-        }
-    </style>
+    <title>Héctor | Data Scientist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="stylesheets/cyberdystopia.css">
 </head>
 <body>
-    <div class="toolbar">
-        <div class="container">
-            <button id="mode-switch">Switch to Light Mode</button>
-            <a href="mailto:hectorp94@hotmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/héctor-rodríguez-pérez-470592122/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        </div>
-    </div>
     <header>
-        <div class="container header-content">
-            <img src="images/profile_hrp.jpg" alt="Héctor Rodríguez-Pérez" class="profile-photo">
-            <div class="header-text">
-                <h1>Héctor Rodríguez-Pérez, PhD</h1>
-                <p>Bioinformatics Scientist | Data Enthusiast | Machine Learning and Software Engineer</p>
+        <div class="container profile-container">
+            <div class="profile-info">
+                <h1 class="glitch" data-text="HÉCTOR RODRÍGUEZ-PÉREZ">Héctor Rodríguez-Pérez</h1>
+                <span class="subtitle">[BIOINFORMATICS] > [DATA_SCIENCE] > [ML_RESEARCH]</span>
+                
+                <div class="social-links">
+                    <a href="mailto:hectorp94@hotmail.com" class="social-link" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/héctor-rodríguez-pérez-470592122/" target="_blank" class="social-link" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://github.com/hecrp" target="_blank" class="social-link" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://scholar.google.com/citations?user=YneE-qgAAAAJ&hl=es" target="_blank" class="social-link" title="Google Scholar">
+                        <i class="fas fa-graduation-cap"></i>
+                    </a>
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Rodríguez-Pérez+H&cauthor_id=33815688" target="_blank" class="social-link" title="PubMed">
+                        <i class="fas fa-book-medical"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </header>
 
-    <div class="container">
-        <section class="bio">
-            <h2>About Me 🧬💻</h2>
-            <p>Hello! I'm Héctor, a bioinformatics and data scientist passionate about technology and science. I specialize in developing innovative solutions for large-scale genomic and metagenomic datasets, with expertise in next-generation sequencing for human genomics, microbiome research, and machine learning applications in biology.</p>
-
-            <p>My recent work focuses on clinical applications of next-generation sequencing, leveraging cutting-edge NGS technologies for real-time microbial community profiling and exploring antibiotic resistance. I'm always eager to learn new technologies and work on challenging programming projects.</p>
-
-            <p>I'm open to collaborations in bioinformatics, data science, or software engineering. Feel free to reach out if you'd like to connect or explore potential opportunities!</p>
+    <main class="container">
+        <!-- Terminal About Me Section -->
+        <section class="terminal-section">
+            <div class="terminal-header">
+                <div class="terminal-dots">
+                    <div class="dot dot-red"></div>
+                    <div class="dot dot-yellow"></div>
+                    <div class="dot dot-green"></div>
+                </div>
+                <div class="terminal-title">about_me.sh</div>
+            </div>
+            <div class="terminal-content">
+                <ul class="bio-list">
+                    <li>I'm Héctor, a PhD bioinformatics scientist with a strong foundation in computer science and specialized expertise in data science and machine learning. My work focuses on developing robust analytical methods for complex datasets, from genomic sequences to large-scale machine learning applications. With a background that bridges computational theory and practical implementation, I approach problems from multiple angles.</li>
+                    
+                    <li>Beyond biological applications and data science, I'm passionate about computational techniques, programming language design, systems programming, and distributed computing architectures. My experience includes designing statistical models, implementing high-performance algorithms, and developing scalable systems for data processing. In all projects, I emphasize methodological rigor, code quality, and reproducible research practices.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Publications Section -->
+        <section class="terminal-section">
+            <div class="terminal-header">
+                <div class="terminal-dots">
+                    <div class="dot dot-red"></div>
+                    <div class="dot dot-yellow"></div>
+                    <div class="dot dot-green"></div>
+                </div>
+                <div class="terminal-title">publications.md</div>
+            </div>
+            <div class="terminal-content">
+                <ol class="publication-list">
+                    <li>Rodríguez-Pérez H, Ciuffreda L, Flores C. NanoRTax, a real-time pipeline for taxonomic and diversity analysis of nanopore 16S rRNA amplicon sequencing data. Computational and Structural Biotechnology Journal. 20, pp. 5350 - 5354. 2022.</li>
+                    
+                    <li>Rodríguez H, Ciuffreda L, Flores C. NanoCLUST: a species-level analysis of 16S rRNA nanopore sequencing data. Bioinformatics. 37 - 11, pp. 1600 - 1601. 2021.</li>
+                    
+                    <li>Ciuffreda L, Rodríguez Perez H, Flores Infante C. Nanopore sequencing and its application to the study of microbial communities. Computational and Structural Biotechnology Journal. 19, pp. 1497 - 1511. 2021.</li>
+                    
+                    <li>Rodríguez-Pérez H, Ciuffreda L. et al. Tracheal aspirate metagenomics reveals association of antibiotic resistance with non-pulmonary sepsis mortality. American Journal of Respiratory Cell and Molecular Biology. (2024).</li>
+                </ol>
+                
+                <p>For a complete list of publications, please visit my <a href="https://scholar.google.com/citations?user=YneE-qgAAAAJ&hl=es" target="_blank">Google Scholar profile</a> or <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Rodríguez-Pérez+H&cauthor_id=33815688" target="_blank">PubMed</a>.</p>
+            </div>
         </section>
 
-        <section class="skills">
-            <h2>Skills 🛠️</h2>
-            <ul>
-                <li>Bioinformatics applications to Next-Generation Sequencing (NGS) Data Analysis (Human genomics, metagenomics, microbial diversity, antibiotic resistance, single-cell genomics) 🧬🔬</li>
-                <li>Machine Learning and Statistical Modeling 🤖📊</li>
-                <li>Programming (Python and R environments, Bash scripting, Java, MS environments, C/C++, SQL) 💻🐍</li>
-                <li>Linux system administration, Docker, and HPC/cloud computing ☁️🐧</li>
-                <li>Natural Language Processing (NLP) with LLMs and Open Source Language Models 📝🗣️</li>
-                <li>Strong analytical and problem-solving skills with a focus on efficiency, simplicity and innovative solutions 🧩💡</li>
-                <li>Strong communication skills, adept at presenting complex scientific and technical concepts to diverse audiences 🎤📊</li>
-            </ul>
-        </section>
-
-        <section class="publications">
-            <h2>Most Relevant Publications 📚</h2>
-            <ul>
-                <li><strong>Rodríguez-Pérez H</strong>, Ciuffreda L, Flores C. <strong>NanoRTax, a real-time pipeline for taxonomic and diversity analysis of nanopore 16S rRNA amplicon sequencing data</strong>. Computational and Structural Biotechnology Journal. 20, pp. 5350 - 5354. Elsevier, 23/10/2022.</li>
-                <li><strong>Rodríguez H</strong>, Ciuffreda L, Flores C. <strong>NanoCLUST: a species-level analysis of 16S rRNA nanopore sequencing data</strong>. Bioinformatics. 37 - 11, pp. 1600 - 1601. Oxford, 12/07/2021.</li>
-                <li>Ciuffreda L, <strong>Rodríguez Perez H</strong>, Flores Infante C. <strong>Nanopore sequencing and its application to the study of microbial communities</strong>. Computational and Structural Biotechnology Journal. 19, pp. 1497 - 1511. Elsevier, 07/03/2021.</li>
-                <li><strong>Rodríguez-Pérez H</strong>, Ciuffreda L. et al. <strong>Tracheal aspirate metagenomics reveals association of antibiotic resistance with non-pulmonary sepsis mortality</strong>. American Journal of Respiratory Cell and Molecular Biology. (2024). Accepted for publication.</li>
-            </ul>
-            <p>For a complete list of publications, please visit my <a href="https://pubmed.ncbi.nlm.nih.gov/?term=Rodríguez-Pérez+H&cauthor_id=33815688" target="_blank">PubMed profile</a>. 📚🔍</p>
-        </section>
-        <section class="personal-projects">
-            <h2>Personal Projects 🚀</h2>
-            <p><em>Note: The following projects are non-bioinformatics related and showcase my other current programming interests.</em></p>
+        <!-- Skills Section -->
+        <section>
+            <h2>SKILLS_AND_COMPETENCIES</h2>
             
-            <h3><a href="https://hecrp.github.io/Twitch-Battle-Royale-Bot/" target="_blank">Twitch Battle Royale Bot</a> 🎮</h3>
-            <p>A Twitch bot that simulates a battle royale game in chat, allowing viewers to participate in an interactive experience. 🏆💬</p>
-            <ul>
-                <li><a href="https://github.com/hecrp/Twitch-Battle-Royale-Bot" target="_blank">GitHub Repository</a> 📁</li>
-                <li><a href="https://twitch-battle-royale-bot.readthedocs.io/" target="_blank">ReadTheDocs Documentation</a> 📚</li>
-            </ul>
-
-            <h3><a href="https://hecrp.github.io/Persona-Chatting-Twitch-Bot/" target="_blank">Persona Chatting Bot</a> 🤖</h3>
-            <p>A multiengine AI-powered Twitch bot that brings diverse interactions to chat using advanced GPT and Claude language models. The bot responds to messages based on chosen character personas. 💬🎭</p>
-            <ul>
-                <li><a href="https://github.com/hecrp/Persona-Chatting-Twitch-Bot" target="_blank">GitHub Repository</a> 📁</li>
-                <li><a href="https://persona-chatting-twitch-bot.readthedocs.io/" target="_blank">ReadTheDocs Documentation</a> 📚</li>
-            </ul>
-            <h3><a href="https://github.com/hecrp/LLM-train-monitor" target="_blank">LLM Training Monitor</a> 📊</h3>
-            <p>A Rust-based CLI tool for monitoring LLM training processes. It provides real-time information about system resources used during LLM training, including CPU and GPU usage, memory consumption, and process-specific metrics. 🖥️🔍</p>
-            <ul>
-                <li><a href="https://github.com/hecrp/LLM-train-monitor" target="_blank">GitHub Repository</a> 📁</li>
-            </ul>
+            <div class="card-container">
+                <div class="card">
+                    <h3><i class="fas fa-dna card-icon"></i> BIOINFORMATICS</h3>
+                    <ul class="skills-list">
+                        <li>NGS Data Analysis and Pipelines (Nanopore, Illumina)</li>
+                        <li>Human Genomics</li>
+                        <li>Metagenomics</li>
+                        <li>Antibiotic Resistance</li>
+                        <li>Single-cell Genomics and Epigenomics</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3><i class="fas fa-robot card-icon"></i> AI_&_MACHINE_LEARNING</h3>
+                    <ul class="skills-list">
+                        <li>Advanced Statistical Modeling</li>
+                        <li>Deep Learning</li>
+                        <li>LLMs and Open Source Language Models</li>
+                        <li>Data Mining and Predictive Analysis in general</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3><i class="fas fa-code card-icon"></i> DEVELOPMENT</h3>
+                    <ul class="skills-list">
+                        <li>Python and R environments for data analysis and ML</li>
+                        <li>Java, C/C++, Rust, Bash scripting</li>
+                        <li>SQL and Database design</li>
+                        <li>Linux enthusiast and system administration</li>
+                        <li>Docker and HPC/cloud computing</li>
+                    </ul>
+                </div>
+            </div>
         </section>
-    </div>
+
+        <!-- Projects Section -->
+        <section>
+            <h2>PERSONAL_PROJECTS</h2>
+            
+            <div class="card-container">
+                <div class="card">
+                    <h3><i class="fas fa-dna card-icon"></i> KRAKENCLIP</h3>
+                    <p>A high-performance Rust utility for processing Kraken2 bioinformatics software reports and log files. Focused on fast and efficient processing of classifier outputs for large datasets or bioinformatics pipelines.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/hecrp/KrakenClip" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> GITHUB
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3><i class="fas fa-chart-bar card-icon"></i> 2D-PARTICLES</h3>
+                    <p>A p5.js visualization playground for 2D particle systems with interactive effects, customizable particle behaviors, and adjustable physics parameters. Includes mouse-based particle interactions and visual effects.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/hecrp/2D-Particles" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> GITHUB
+                        </a>
+                        <a href="https://hecrp.github.io/2D-Particles/" class="project-link" target="_blank">
+                            <i class="fas fa-globe"></i> DEMO
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3><i class="fas fa-gamepad card-icon"></i> TWITCH BATTLE ROYALE BOT</h3>
+                    <p>A Twitch bot that simulates a battle royale game in chat, allowing viewers to participate in an interactive experience.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/hecrp/Twitch-Battle-Royale-Bot" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> GITHUB
+                        </a>
+                        <a href="https://twitch-battle-royale-bot.readthedocs.io/" class="project-link" target="_blank">
+                            <i class="fas fa-book"></i> DOCS
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3><i class="fas fa-robot card-icon"></i> PERSONA CHATTING BOT</h3>
+                    <p>A multiengine AI-powered Twitch bot that brings diverse interactions to chat using advanced GPT and Claude language models. The bot responds to messages based on chosen character personas.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/hecrp/Persona-Chatting-Twitch-Bot" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> GITHUB
+                        </a>
+                        <a href="https://persona-chatting-twitch-bot.readthedocs.io/" class="project-link" target="_blank">
+                            <i class="fas fa-book"></i> DOCS
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="card">
+                    <h3><i class="fas fa-chart-line card-icon"></i> LLM TRAINING MONITOR</h3>
+                    <p>A Rust-based CLI tool for monitoring LLM training processes. It provides real-time information about system resources used during LLM training, including CPU and GPU usage, memory consumption, and process-specific metrics.</p>
+                    <div class="project-links">
+                        <a href="https://github.com/hecrp/LLM-train-monitor" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i> GITHUB
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2024 Héctor Rodríguez-Pérez. All rights reserved. 🌟</p>
+        <div class="container">
+            <p class="glitch" data-text="[HÉCTOR_RODRÍGUEZ-PÉREZ] © 2024">[HÉCTOR_RODRÍGUEZ-PÉREZ] © 2025</p>
+        </div>
     </footer>
 
-    <script>
-        const modeSwitch = document.getElementById('mode-switch');
-        const body = document.body;
-
-        modeSwitch.addEventListener('click', () => {
-            body.classList.toggle('light-mode');
-            if (body.classList.contains('light-mode')) {
-                modeSwitch.textContent = 'Switch to Dark Mode';
-            } else {
-                modeSwitch.textContent = 'Switch to Light Mode';
-            }
-        });
-    </script>
+    <script src="javascripts/cyberdystopia.js"></script>
 </body>
 </html>
